@@ -13,8 +13,8 @@ export interface IHomeProps {
 export const Home = (props: IHomeProps) => {
   const { data, isLoading } = props;
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
+    <View className="flex flex-1 bg-white items-center justify-center">
+      <StatusBar />
       {isLoading ? (
         <HStack space={2} justifyContent="center">
           <Spinner accessibilityLabel="Loading posts" />
@@ -33,12 +33,3 @@ export const Home = (props: IHomeProps) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
