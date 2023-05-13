@@ -12,10 +12,8 @@ module.exports = {
       "green": "#B7FCD2",
       "dark-green": "#32B778",
       "light-red": "#F7B7B7",
-    },
-    fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
+      "white": "#ffffff",
+      "black": "#000000"
     },
     extend: {},
   },
