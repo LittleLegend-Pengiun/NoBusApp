@@ -2,7 +2,7 @@ import { i18n, LocalizationKey } from "@/Localization";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { User } from "@/Services";
-import HCBottomBar from "./components/HCBottomBar";
+import HCBottomBar from "./components/BottomBar";
 
 
 export interface IHomeProps {
