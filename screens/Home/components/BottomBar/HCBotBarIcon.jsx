@@ -1,5 +1,5 @@
 import React from 'react'
-import { TouchableOpacity } from 'react-native'
+import { TouchableOpacity, Text } from 'react-native'
 
 function HCBotBarIcon({outline, fill, IconComp, currentIcon, setIcon, id}) {
     function handleTouch() {

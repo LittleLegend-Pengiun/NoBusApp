@@ -32,7 +32,6 @@ const icons = [
     }
 ]
 
-
 export default function () {
     const [icon, setIcon] = useState("home");
   return (
@@ -48,7 +47,6 @@ export default function () {
             id={id}
             />
         ))}
-        
     </View>
   )
 }

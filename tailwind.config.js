@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./App.js", 
+    "./screens/**/*.{js,jsx,ts,tsx}"
+  ],
   theme: {
     colors: {
       "purple": "#6D41A1",
