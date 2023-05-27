@@ -12,6 +12,8 @@ Start the project
 npm run start
 ```
 
+Android virtual device: Pixel 3A
+
 ### File Structure
 
 The template's file structure is organized as follows:
