@@ -4,9 +4,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function ({ navigation }) {
   return (
-    <View>
-      {/*Purple Top View*/}
-      <View className="bg-purple h-[360px]">
+    <View className="bg-purple h-full">
+      {/*Top View*/}
+      <View>
 
         <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
           {/*Back Button*/}
@@ -43,29 +43,17 @@ export default function ({ navigation }) {
 
         {/*SWITCH POSITION Button*/}
         <TouchableOpacity className="w-[50px] h-[50px] -mt-[90px] mb-11 ml-[338px] rounded-xl bg-purple">
-          <Image source={require('./img/Collapse.png')} className="mt-3 ml-2"/>
+          <Image source={require('./img/Collapse.png')} className="mt-3 ml-2" />
         </TouchableOpacity>
 
-        {/*ĐiTỐI ĐA 2 CHUYẾN Button*/}
-        <TouchableOpacity>
-          <Text className="text-white ml-6 mt-3 pb-1">Đi tối đa 2 chuyến&nbsp;&nbsp;&nbsp;&nbsp;
-            <Image source={require('./img/down.png')} />
-          </Text>
-
-        </TouchableOpacity>
-
-        {/*TÌM ĐƯỜNG Button*/}
-        <TouchableOpacity className="p-2.5 ml-5 mr-5 mt-6 mb-2 rounded-2xl bg-white" onPress={() => navigation.navigate("RouteRs")}>
-          <Text className="text-purple font-bold text-center text-lg">TÌM ĐƯỜNG</Text>
-        </TouchableOpacity>
+        {/*CÁC CÁCH DI CHUYỂN PHÙ HỢP Label*/}
+        <Text className="font-bold text-white text-lg ml-6 mt-1">Các cách di chuyển phù hợp</Text>
 
       </View>
+      
+      {/*CÁC CÁCH DI CHUYỂN View*/}
+      <View className="bg-white h-[450px] ml-5 mr-5 mt-6 mb-2  rounded-xl">
 
-      <View>
-        {/*MAP*/}
-        <TouchableOpacity>
-            <Image source={require('./img/map1.png')}/>
-          </TouchableOpacity>
       </View>
     </View>
 
