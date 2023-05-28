@@ -1,10 +1,24 @@
 import React from 'react'
-import { Text, View, Image, TouchableOpacity } from 'react-native'
+import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native'
+import MapView from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
+
+const styles = StyleSheet.create({
+  container: {
+    ...StyleSheet.absoluteFillObject,
+    height: 420,
+    marginTop: 360,
+    bottom: 0,
+  },
+  map: {
+    flex: 1, //the container will fill the whole screen.
+    ...StyleSheet.absoluteFillObject,
+  },
+});
 
 export default function ({ navigation }) {
   return (
-    <View>
+    <View className="h-full">
       {/*Purple Top View*/}
       <View className="bg-purple h-[360px]">
 
@@ -43,7 +57,7 @@ export default function ({ navigation }) {
 
         {/*SWITCH POSITION Button*/}
         <TouchableOpacity className="w-[50px] h-[50px] -mt-[90px] mb-11 ml-[338px] rounded-xl bg-purple">
-          <Image source={require('./img/Collapse.png')} className="mt-3 ml-2"/>
+          <Image source={require('./img/Collapse.png')} className="mt-3 ml-2" />
         </TouchableOpacity>
 
         {/*ĐiTỐI ĐA 2 CHUYẾN Button*/}
@@ -61,11 +75,18 @@ export default function ({ navigation }) {
 
       </View>
 
-      <View>
+      <View style={styles.container}>
         {/*MAP*/}
-        <TouchableOpacity>
-            <Image source={require('./img/map1.png')}/>
-          </TouchableOpacity>
+        <MapView
+          style={styles.map}
+          //specify our coordinates.
+          initialRegion={{
+            latitude: 10.835473,
+            longitude: 106.639089,
+            latitudeDelta: 0.04,
+            longitudeDelta: 0.05,
+          }}
+        />
       </View>
     </View>
 

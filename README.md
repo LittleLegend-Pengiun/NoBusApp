@@ -19,3 +19,13 @@ Android virtual device: Pixel 3A
 The template's file structure is organized as follows:
 
 - `screens/`: This folder contains all the screens in projects
+
+
+<p align="center">
+  <br>
+  <img src="scrshot1.png">
+  <br>
+  <br>
+  <img src="scrshot2.png">
+  <br>
+</p>
