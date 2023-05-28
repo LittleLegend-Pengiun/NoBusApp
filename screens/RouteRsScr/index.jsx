@@ -58,7 +58,7 @@ export default function ({ navigation }) {
         <TouchableOpacity onPress={() => navigation.navigate("Gooo")}>
           {/*First Row*/}
           <Text>
-            <TouchableOpacity className="pt-2 pl-3" disabled={true}>
+            <TouchableOpacity className="pt-2 pl-4" disabled={true}>
               <Text className="bg-dark-green rounded-md text-white text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 <Image source={require('./img/G47.png')} className="ml-1" />
                 &nbsp;&nbsp;24
@@ -76,7 +76,7 @@ export default function ({ navigation }) {
               </Text>
             </TouchableOpacity>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <TouchableOpacity className="pt-2 pl-2" disabled={true}>
               <Text className="bg-white border-black border-solid border rounded-xl text-dark-gray text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 17k đ
@@ -122,7 +122,7 @@ export default function ({ navigation }) {
         <TouchableOpacity onPress={() => navigation.navigate("Gooo")}>
           {/*First Row*/}
           <Text>
-            <TouchableOpacity className="pt-2 pl-3" disabled={true}>
+            <TouchableOpacity className="pt-2 pl-4" disabled={true}>
               <Text className="bg-dark-green rounded-md text-white text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 <Image source={require('./img/G47.png')} className="ml-1" />
                 &nbsp;&nbsp;08
@@ -140,7 +140,7 @@ export default function ({ navigation }) {
               </Text>
             </TouchableOpacity>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <TouchableOpacity className="pt-2 pl-2" disabled={true}>
               <Text className="bg-white border-black border-solid border rounded-xl text-dark-gray text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 17k đ
@@ -186,7 +186,7 @@ export default function ({ navigation }) {
         <TouchableOpacity onPress={() => navigation.navigate("Gooo")}>
           {/*First Row*/}
           <Text>
-            <TouchableOpacity className="pt-2 pl-3" disabled={true}>
+            <TouchableOpacity className="pt-2 pl-4" disabled={true}>
               <Text className="bg-dark-green rounded-md text-white text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 <Image source={require('./img/G47.png')} className="ml-1" />
                 &nbsp;&nbsp;08
@@ -204,7 +204,7 @@ export default function ({ navigation }) {
               </Text>
             </TouchableOpacity>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <TouchableOpacity className="pt-2 pl-2" disabled={true}>
               <Text className="bg-white border-black border-solid border rounded-xl text-dark-gray text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 17k đ
@@ -250,7 +250,7 @@ export default function ({ navigation }) {
         <TouchableOpacity onPress={() => navigation.navigate("Gooo")}>
           {/*First Row*/}
           <Text>
-            <TouchableOpacity className="pt-2 pl-3" disabled={true}>
+            <TouchableOpacity className="pt-2 pl-4" disabled={true}>
               <Text className="bg-dark-green rounded-md text-white text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 <Image source={require('./img/G47.png')} className="ml-1" />
                 &nbsp;&nbsp;08
@@ -268,7 +268,7 @@ export default function ({ navigation }) {
               </Text>
             </TouchableOpacity>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <TouchableOpacity className="pt-2 pl-2" disabled={true}>
               <Text className="bg-white border-black border-solid border rounded-xl text-dark-gray text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 17k đ
