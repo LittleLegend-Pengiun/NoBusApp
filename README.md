@@ -23,12 +23,12 @@ The template's file structure is organized as follows:
 
 <p align="center">
   <br>
-  <img src="Screenshots/scrshot1.png">
+  <img src="Screenshots/scrshot1.png" width="50%">
   <br>
   <br>
-  <img src="Screenshots/scrshot2.png">
+  <img src="Screenshots/scrshot2.png" width="50%">
   <br>
   <br>
-  <img src="Screenshots/scrshot3.png">
+  <img src="Screenshots/scrshot3.png" width="50%">
   <br>
 </p>
