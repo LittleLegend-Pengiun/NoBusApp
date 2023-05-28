@@ -2,10 +2,13 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import BottomBar from "./components/BottomBar";
 import { SafeAreaView } from "react-native-safe-area-context";
+import TopBar from "./components/TopBar";
 
 export default function({ navigation }){
   return (
-    <SafeAreaView className="bg-white">
+    <View className="bg-white">
+      <TopBar />
+
       <View className="flex flex-row">
         <TouchableOpacity className="p-2 m-2 bg-dark-purple"
         onPress={() => navigation.navigate("RouteInfo")}>
@@ -21,6 +24,6 @@ export default function({ navigation }){
         </TouchableOpacity>
       </View>
       <BottomBar className="bg-white"/>
-    </SafeAreaView>
+    </View>
   )
 };
