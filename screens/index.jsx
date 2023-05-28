@@ -5,6 +5,8 @@ import Home from "./Home"
 import AddressScr from './AddressScr';
 import BusInfo from './BusInfo';
 import RouteInfo from './RouteInfo'
+import FindPlaceScr from './FindPlaceScr'
+import RouteRsScr from './RouteRsScr'
 
 const listScreens = [
   {
@@ -13,7 +15,11 @@ const listScreens = [
   },
   {
     name: 'Address',
-    Component: AddressScr,
+    Component: AddressScr
+  },
+  {
+    name: "FindPlace",
+    Component: FindPlaceScr
   },
   {
     name: "BusInfo",
@@ -22,6 +28,10 @@ const listScreens = [
   {
     name: "RouteInfo",
     Component: RouteInfo
+  },
+  {
+    name: "RouteRs",
+    Component: RouteRsScr
   }
 ]
 const Stack = createNativeStackNavigator();
