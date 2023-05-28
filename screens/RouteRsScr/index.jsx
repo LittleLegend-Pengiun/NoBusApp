@@ -76,14 +76,14 @@ export default function ({ navigation }) {
               </Text>
             </TouchableOpacity>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <TouchableOpacity className="pt-2 pl-2">
               <Text className="bg-white border-black border-solid border rounded-xl text-dark-gray text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 17k đ
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity className="pt-2 pl-4 flex-wrap text-center">
+            <TouchableOpacity className="pt-2 pl-3 flex-wrap text-center">
               <Text className="bg-white rounded-md text-purple text-2xl font-bold text-center">
                 43
               </Text>
@@ -140,14 +140,14 @@ export default function ({ navigation }) {
               </Text>
             </TouchableOpacity>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <TouchableOpacity className="pt-2 pl-2">
               <Text className="bg-white border-black border-solid border rounded-xl text-dark-gray text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 17k đ
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity className="pt-2 pl-4 flex-wrap text-center">
+            <TouchableOpacity className="pt-2 pl-3 flex-wrap text-center">
               <Text className="bg-white rounded-md text-purple text-2xl font-bold text-center">
                 49
               </Text>
@@ -204,14 +204,14 @@ export default function ({ navigation }) {
               </Text>
             </TouchableOpacity>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <TouchableOpacity className="pt-2 pl-2">
               <Text className="bg-white border-black border-solid border rounded-xl text-dark-gray text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 17k đ
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity className="pt-2 pl-4 flex-wrap text-center">
+            <TouchableOpacity className="pt-2 pl-3 flex-wrap text-center">
               <Text className="bg-white rounded-md text-purple text-2xl font-bold text-center">
                 49
               </Text>
@@ -268,14 +268,14 @@ export default function ({ navigation }) {
               </Text>
             </TouchableOpacity>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <TouchableOpacity className="pt-2 pl-2">
               <Text className="bg-white border-black border-solid border rounded-xl text-dark-gray text-base font-bold w-[60px] h-[35px] pl-2 pt-1">
                 17k đ
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity className="pt-2 pl-4 flex-wrap text-center">
+            <TouchableOpacity className="pt-2 pl-3 flex-wrap text-center">
               <Text className="bg-white rounded-md text-purple text-2xl font-bold text-center">
                 49
               </Text>
