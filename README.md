@@ -8,7 +8,7 @@ For Android devices
 
 <p align="center">
   <br>
-  <img src="assets/adroid_qr.png" width="50%">
+  <img src="assets/android_qr.png" width="50%">
   <br>
 </p>
 
