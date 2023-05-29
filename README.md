@@ -1,5 +1,26 @@
 # No Bus App
 
+### Overview
+
+If you want to preview this app online, use the Expo Go app to scan the QR code below
+
+For Android devices
+
+<p align="center">
+  <br>
+  <img src="assets/adroid_qr.png" width="50%">
+  <br>
+</p>
+
+For iOS devices
+
+<p align="center">
+  <br>
+  <img src="assets/ios_QR.png" width="50%">
+  <br>
+</p>
+
+
 ### Important note
 
 Install all dependacies 
@@ -12,7 +33,7 @@ Start the project
 npm run start
 ```
 
-Android virtual device: Pixel 3A
+This app is highly optimize for the **Google Pixel 3A**
 
 ### File Structure
 
@@ -20,6 +41,8 @@ The template's file structure is organized as follows:
 
 - `screens/`: This folder contains all the screens in projects
 
+
+### Preview
 
 <p align="center">
   <br>
