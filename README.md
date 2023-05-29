@@ -1,6 +1,8 @@
 # No Bus App
 
-### Overview
+#### This app is highly optimize for the **Google Pixel 3A**
+
+## Overview
 
 If you want to preview this app online, use the Expo Go app to scan the QR code below
 
@@ -21,7 +23,7 @@ For iOS devices
 </p>
 
 
-### Important note
+## Important note
 
 Install all dependacies 
 ```bash
@@ -33,9 +35,7 @@ Start the project
 npm run start
 ```
 
-This app is highly optimize for the **Google Pixel 3A**
-
-### File Structure
+## File Structure
 
 The template's file structure is organized as follows:
 
