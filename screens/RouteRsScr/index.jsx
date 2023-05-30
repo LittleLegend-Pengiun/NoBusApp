@@ -1,27 +1,14 @@
 import React from 'react'
 import { Text, View, Image, TouchableOpacity, Button, StyleSheet } from 'react-native'
 import { SafeAreaView } from "react-native-safe-area-context";
+import PageTitle from '../components/PageTitle';
 
 export default function ({ navigation }) {
   return (
     <View className="bg-purple h-full">
       {/*Top View*/}
       <View>
-
-        <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-          {/*Back Button*/}
-          <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-            <Image source={require('./img/Arrow.png')} className="mt-10 ml-6" />
-          </TouchableOpacity>
-
-          {/*Main label*/}
-          <Text className="mt-10 ml-8 font-bold text-white text-lg">Tra cứu theo đường đi</Text>
-
-          {/*Refresh Button*/}
-          <TouchableOpacity>
-            <Image source={require('./img/Refresh.png')} className="-mt-[33px] ml-[340px]" />
-          </TouchableOpacity>
-        </View>
+        <PageTitle title={"Tra cứu theo đường đi"} navigation={navigation} showReload={true}/>
 
         {/*ĐI TỪ Button*/}
         <TouchableOpacity className="p-3.5 ml-5 mr-5 mt-6 mb-2 rounded-2xl bg-dark-purple" onPress={() => navigation.navigate("FindPlace")}>

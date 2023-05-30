@@ -24,6 +24,7 @@ export default function ({ navigation }) {
       <View className="bg-purple h-[360px]">
 
         <PageTitle title="Tra cứu đường đi" navigation={navigation} showReload={false}/>
+
         {/*ĐI TỪ Button*/}
         <TouchableOpacity className="p-3.5 ml-5 mr-5 mt-6 mb-2 rounded-2xl bg-dark-purple" onPress={() => navigation.navigate("FindPlace")}>
           <Text className="ml-3">

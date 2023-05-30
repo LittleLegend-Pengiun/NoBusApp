@@ -1,10 +1,10 @@
 import React from "react";
 import { TextInput, TouchableOpacity, View, Image, Text, ScrollView } from "react-native";
-import Header from "./components/Header";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Category from "./components/Category";
 import Entypo from "react-native-vector-icons/Entypo";
 import HistoryItem from "./components/HistoryItem";
+import PageTitle from "../components/PageTitle";
 
 const categories = [
   {
@@ -58,7 +58,7 @@ const historyItems = [
 export default function ({ navigation }) {
   return (
     <View className="bg-purple h-full">
-      <Header navigation={navigation} />
+      <PageTitle title={"Tra cứu theo đường đi"} navigation={navigation} showReload={false} />
 
       {/* Search */}
       <View className="w-11/12 items-center flex-row space-x-2 bg-white p-3 mt-3 self-center border border-purple rounded-lg drop-shadow-lg">
