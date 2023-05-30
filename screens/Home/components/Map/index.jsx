@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import MapView from "react-native-maps";
+import { PROVIDER_GOOGLE } from 'react-native-maps';
 
 export default function () {
   return (
@@ -16,6 +17,7 @@ export default function () {
         longitudeDelta: 0.05,
       }}
       zoomEnabled={false}
+      provider={PROVIDER_GOOGLE}
     />
   </View>
   );

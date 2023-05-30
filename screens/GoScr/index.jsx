@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native'
 import MapView from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { PROVIDER_GOOGLE } from 'react-native-maps';
 
 const styles = StyleSheet.create({
   container: {
@@ -49,6 +50,7 @@ export default function ({ navigation }) {
             longitudeDelta: 0.05,
           }}
           zoomEnabled={false}
+          provider={PROVIDER_GOOGLE}
         />
       </View>
 

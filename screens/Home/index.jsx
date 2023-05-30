@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Alert } from "react-native";
 import BottomBar from "./components/BottomBar";
-import { SafeAreaView } from "react-native-safe-area-context";
 import TopBar from "./components/TopBar";
 import HalfMIdZone from "./components/HalfMIdZone";
 import Map from "./components/Map";
@@ -85,7 +84,7 @@ export default function ({ navigation }) {
 
       {/* Cục chặn cái map cho k che chữ */}
       <View className="mb-10"/>
-      
+      <Map />
       <View className="bottom-0">
         <HalfMIdZone iconList={iconListBotHalf} />
         <BottomBar className="bg-white" />

@@ -71,12 +71,12 @@ export default function ({ navigation }) {
       </View>
 
       {/* Categories */}
-      <View className="flex-row mt-2 px-3">
+      <View className="flex-row mt-2 px-3 justify-between mx-2">
         {categories.map(({ title, icon, color}) => (
           <Category key={title} title={title} icon={icon} color={color}/>
         ))}
 
-        <TouchableOpacity className="p-2 m-2 rounded-lg bg-white items-center">
+        <TouchableOpacity className="p-2 rounded-lg bg-white items-center">
           <Entypo name="plus" size={20}/>
         </TouchableOpacity>
       </View>
