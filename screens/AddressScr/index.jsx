@@ -86,6 +86,7 @@ export default function ({ navigation }) {
             latitudeDelta: 0.04,
             longitudeDelta: 0.05,
           }}
+          zoomEnabled={false}
         />
       </View>
     </View>
