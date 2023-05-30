@@ -85,7 +85,7 @@ export default function ({ navigation }) {
 
       {/* Cục chặn cái map cho k che chữ */}
       <View className="mb-10"/>
-      <Map />
+      
       <View className="bottom-0">
         <HalfMIdZone iconList={iconListBotHalf} />
         <BottomBar className="bg-white" />

@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native'
 import MapView from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
+import PageTitle from '../components/PageTitle';
 
 const styles = StyleSheet.create({
   container: {
@@ -22,21 +23,7 @@ export default function ({ navigation }) {
       {/*Purple Top View*/}
       <View className="bg-purple h-[360px]">
 
-        <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-          {/*Back Button*/}
-          <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-            <Image source={require('./img/Arrow.png')} className="mt-10 ml-6" />
-          </TouchableOpacity>
-
-          {/*Main label*/}
-          <Text className="mt-10 ml-8 font-bold text-white text-lg">Tra cứu theo đường đi</Text>
-
-          {/*Refresh Button*/}
-          <TouchableOpacity>
-            <Image source={require('./img/Refresh.png')} className="-mt-[33px] ml-[340px]" />
-          </TouchableOpacity>
-        </View>
-
+        <PageTitle title="Tra cứu đường đi" navigation={navigation} showReload={false}/>
         {/*ĐI TỪ Button*/}
         <TouchableOpacity className="p-3.5 ml-5 mr-5 mt-6 mb-2 rounded-2xl bg-dark-purple" onPress={() => navigation.navigate("FindPlace")}>
           <Text className="ml-3">
