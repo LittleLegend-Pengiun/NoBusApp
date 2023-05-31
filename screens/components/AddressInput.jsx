@@ -25,7 +25,7 @@ function AddressInput({navigation}) {
         }}
       >
         <Text className="text-white font-bold">Đi từ</Text>
-        <Image source={require("./img/pluscircle.png")} className="h-5" />
+        <Image source={require("./img/pluscircle.png")} className="h-5 w-5" />
         <Text className="text-white inline">
           {start == "" ? "Chọn điểm khởi hành" : start}
         </Text>
