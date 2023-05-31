@@ -31,7 +31,7 @@ export default function ({ navigation }) {
 
           {/*Main label*/}
           <Text className="mt-9 ml-8 font-bold text-white text-md">Đi từ đường Bùi Quang Là</Text>
-          <Text className="ml-[86px] -mt-3 font-bold text-white text-md">Đến Trường Đại học Khoa học Xã hội và Nhân...</Text>
+          <Text numberOfLines={1} className="ml-[86px] -mt-3 font-bold text-white text-md">Đến Trường Đại học Khoa học Xã hội và Nhân văn</Text>
 
         </View>
 
