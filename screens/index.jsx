@@ -7,6 +7,8 @@ import BusInfo from './BusInfo';
 import RouteInfo from './RouteInfo'
 import FindPlaceScr from './FindPlaceScr'
 import RouteRsScr from './RouteRsScr'
+import GoScr from './GoScr'
+import RouteDetail from './RouteDetail'
 
 const listScreens = [
   {
@@ -32,7 +34,15 @@ const listScreens = [
   {
     name: "RouteRs",
     Component: RouteRsScr
-  }
+  },
+  {
+    name: "Gooo",
+    Component: GoScr
+  },
+  {
+    name: "RouteDetail",
+    Component: RouteDetail
+  },
 ]
 const Stack = createNativeStackNavigator();
 
