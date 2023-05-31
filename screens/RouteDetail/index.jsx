@@ -124,6 +124,78 @@ export default function ({ navigation }) {
           />
         </View>
 
+        {/*Second*/}
+        <View>
+          <Text>
+            Tháp Mười                      +2 phút
+          </Text>
+          <View className="top-[200px] w-[25%]"
+            style={{
+              borderBottomColor: '#4B4B4B',
+              borderBottomWidth: 4,
+            }}
+          />
+        </View>
+
+        {/*Third*/}
+        <View>
+          <Text>
+            Chơ Kim Biên                      +3 phút
+          </Text>
+          <View className="top-[200px] w-[25%]"
+            style={{
+              borderBottomColor: '#4B4B4B',
+              borderBottomWidth: 4,
+            }}
+          />
+        </View>
+
+        {/*Fourth*/}
+        <View>
+          <Text>
+            Bưu điệm Quận 5                      +4 phút
+          </Text>
+          <View className="top-[200px] w-[25%]"
+            style={{
+              borderBottomColor: '#4B4B4B',
+              borderBottomWidth: 4,
+            }}
+          />
+        </View>
+
+        {/*Fifth*/}
+        <View>
+          <Text>
+            Rạp Đại Quang                      +5 phút
+          </Text>
+          <View className="top-[200px] w-[25%]"
+            style={{
+              borderBottomColor: '#4B4B4B',
+              borderBottomWidth: 4,
+            }}
+          />
+        </View>
+
+        {/*Sixth*/}
+        <View>
+          <Text>
+            Bệnh viện Chợ Rẫy                      +6 phút
+          </Text>
+          <View className="top-[200px] w-[25%]"
+            style={{
+              borderBottomColor: '#4B4B4B',
+              borderBottomWidth: 4,
+            }}
+          />
+        </View>
+
+        {/*Seventh*/}
+        <View>
+          <Text>
+            Lý Thường Kiệt                      +8 phút
+          </Text>
+        </View>
+
       </View>
     </View >
 

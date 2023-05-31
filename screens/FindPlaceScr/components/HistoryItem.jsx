@@ -3,11 +3,15 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import { useDispatch } from "react-redux";
 import { setValue } from "../../../store/routeSlice";
 
-function HistoryItem({ title, desc }) {
+function HistoryItem({ title, desc, navigation }) {
   const dispatch = useDispatch();
   return (
-    <TouchableOpacity className="flex flex-row space-x-3 items-center py-2"
-     onPress={() => dispatch(setValue(title))}
+    <TouchableOpacity
+      className="flex flex-row space-x-3 items-center py-2"
+      onPress={() => {
+        dispatch(setValue(title));
+        navigation.goBack();
+      }}
     >
       <Image
         source={require("../img/black_location_icon.png")}
