@@ -4,14 +4,18 @@ import BottomBar from "./components/BottomBar";
 import TopBar from "./components/TopBar";
 import HalfMIdZone from "./components/HalfMIdZone";
 import Map from "./components/Map";
+import { useDispatch } from "react-redux";
+import { clearAllRoute } from "../../store/routeSlice";
 
 export default function ({ navigation }) {
+  const dispatch = useDispatch()
   const iconListTopHalf = [
     {
       id: 1,
       title: "Tìm theo đường đi",
       imgUrl: require("../../assets/homepgicon/tim-duong-icon.png"),
       navFunc: () => {
+        dispatch(clearAllRoute());
         navigation.navigate("Address");
       },
     },

@@ -24,11 +24,15 @@ export const routeSlice = createSlice({
       const temp = state.start;
       state.start = state.end;
       state.end = temp;
+    },
+    clearAllRoute: (state) => {
+      state.start = ""
+      state.end = ""
     }
   },
 });
 
-export const { switchStart, switchEnd, setValue, reverseValue } = routeSlice.actions;
+export const { switchStart, switchEnd, setValue, reverseValue, clearAllRoute } = routeSlice.actions;
 
 export const startValue = (state) => state.route.start;
 export const endValue = (state) => state.route.end;

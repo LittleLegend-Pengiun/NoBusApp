@@ -114,6 +114,7 @@ export default function ({ navigation }) {
               key={title}
               title={title}
               desc={desc}
+              navigation={navigation}
               />
             ))}
           </ScrollView>
