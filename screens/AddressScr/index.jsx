@@ -4,6 +4,7 @@ import MapView from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
 import PageTitle from '../components/PageTitle';
 import { PROVIDER_GOOGLE } from 'react-native-maps';
+import AddressInput from '../components/AddressInput';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,28 +27,7 @@ export default function ({ navigation }) {
 
         <PageTitle title="Tra cứu đường đi" navigation={navigation} showReload={false}/>
 
-        {/*ĐI TỪ Button*/}
-        <TouchableOpacity className="p-3.5 ml-5 mr-5 mt-6 mb-2 rounded-2xl bg-dark-purple" onPress={() => navigation.navigate("FindPlace")}>
-          <Text className="ml-3">
-            <Text className="text-white font-bold">Đi từ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
-            <Text className="text-white inline">Vị trí hiện tại</Text>
-          </Text>
-          <Image source={require('./img/pluscircle.png')} className="-mt-5 ml-[58px]" />
-        </TouchableOpacity>
-
-        {/*ĐẾN Button*/}
-        <TouchableOpacity className="p-3.5 ml-5 mr-5 mt-1 mb-2 rounded-2xl bg-dark-purple" onPress={() => navigation.navigate("FindPlace")}>
-          <Text className="ml-3">
-            <Text className="text-white font-bold">Đến&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
-            <Text className="text-white inline">Nhập điểm đến</Text>
-          </Text>
-          <Image source={require('./img/Subtract.png')} className="-mt-6 ml-[58px]" />
-        </TouchableOpacity>
-
-        {/*SWITCH POSITION Button*/}
-        <TouchableOpacity className="w-[50px] h-[50px] -mt-[90px] mb-11 ml-[338px] rounded-xl bg-purple">
-          <Image source={require('./img/Collapse.png')} className="mt-3 ml-2" />
-        </TouchableOpacity>
+        <AddressInput navigation={navigation} />
 
         {/*ĐiTỐI ĐA 2 CHUYẾN Button*/}
         <TouchableOpacity>

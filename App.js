@@ -1,9 +1,13 @@
 import * as React from 'react';
 import Screens from './screens';
+import { Provider } from 'react-redux'
+import { store } from './store';
 
 function App() {
   return (
-    <Screens />
+    <Provider store={store}>
+      <Screens />
+    </Provider>
   );
 }
 
