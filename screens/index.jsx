@@ -5,6 +5,7 @@ import Home from "./Home"
 import AddressScr from './AddressScr';
 import BusInfo from './BusInfo';
 import RouteInfo from './RouteInfo'
+import RouteDetail from './RouteDetail'
 import FindPlaceScr from './FindPlaceScr'
 import RouteRsScr from './RouteRsScr'
 import GoScr from './GoScr'
@@ -29,6 +30,10 @@ const listScreens = [
   {
     name: "RouteInfo",
     Component: RouteInfo
+  },
+  {
+    name: "RouteDetail",
+    Component: RouteDetail
   },
   {
     name: "RouteRs",

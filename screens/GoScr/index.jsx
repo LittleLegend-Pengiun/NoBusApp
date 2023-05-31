@@ -184,8 +184,7 @@ export default function ({ navigation }) {
           <Text className="-mt-8 ml-[68px] text-purple font-bold text-md">6 phút</Text>
           <Text className="ml-[332px] -mt-8 font-bold text-black text-md">2.3km</Text>
         </View>
-      </View >
-    </View >
-
+      </View>
+    </View>
   )
 }
