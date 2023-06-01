@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from "./Home"
 import AddressScr from './AddressScr';
 import BusInfo from './BusInfo';
+import BusRoadInfo from './BusRoadInfo';
 import RouteInfo from './RouteInfo'
 import RouteDetail from './RouteDetail'
 import FindPlaceScr from './FindPlaceScr'
@@ -26,6 +27,10 @@ const listScreens = [
   {
     name: "BusInfo",
     Component: BusInfo
+  },
+  {
+    name: "BusRoadInfo",
+    Component: BusRoadInfo
   },
   {
     name: "RouteInfo",
@@ -51,14 +56,14 @@ export default function () {
     <NavigationContainer>
       <Stack.Navigator>
         {listScreens.map((item) => (
-          <Stack.Screen 
-           key={item.name} 
-           name={item.name} 
-           component={item.Component} 
-           options={
-            {presentation: "fullScreenModal", headerShown: false}
-           }
-           />
+          <Stack.Screen
+            key={item.name}
+            name={item.name}
+            component={item.Component}
+            options={
+              { presentation: "fullScreenModal", headerShown: false }
+            }
+          />
         ))}
       </Stack.Navigator>
     </NavigationContainer>
