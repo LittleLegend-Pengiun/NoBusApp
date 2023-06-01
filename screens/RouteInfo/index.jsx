@@ -12,7 +12,7 @@ export default function ({ navigation }) {
       <Header navigation={navigation} />
 
       {/* Search */}
-      <View className="w-11/12 items-center flex-row space-x-2 bg-white p-3 mt-5 self-center border border-purple rounded-xl drop-shadow-lg">
+      <View className="w-11/12 items-center flex-row space-x-2 bg-white p-3 mt-5 self-center rounded-xl drop-shadow">
         <AntDesign name="search1" size={20} color="gray" className="mx-2" />
         <TextInput
           placeholder="Nhập tuyến xe cần tìm"
