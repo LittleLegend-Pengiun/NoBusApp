@@ -15,16 +15,20 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function ({ navigation }) {
+export default function ({ route, navigation }) {
+  const { busTitle, desc } = route.params;
+  const max = 40, min = 5;
+  const speed = Math.floor(Math.random() * (max - min) ) + min;
   return (
     <View className="h-full relative">
-      <View className="bg-purple h-[95px]">
-        <View className="flex-row  mt-10 mx-6">
+      {/* title */}
+      <View className="bg-purple pb-5">
+        <View className="flex-row items-center mt-10 mx-6">
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <AntDesign name="arrowleft" size={30} color="white" />
           </TouchableOpacity>
-          <Image className="ml-4" source={require("./img/Vector.png")} />
-          <Text className="font-bold text-white text-lg"> 50F-002.12</Text>
+          <Image className="ml-4 mr-3" source={require("./img/Vector.png")} />
+          <Text className="font-bold text-white text-lg">{busTitle}</Text>
         </View>
       </View>
 
@@ -45,22 +49,24 @@ export default function ({ navigation }) {
         />
       </View>
 
-      <View className=" flex-col bg-white absolute inset-x-0 bottom-0 h-[135px]">
-        <View className="flex-row">
+      <View className=" flex-col bg-white absolute inset-x-0 bottom-0 py-5">
+        <View className="flex-row items-center justify-between">
           <Text className="ml-4 border-2 border-black font-bold text-black text-2xl">
             {" "}
-            50F-002.12{" "}
+            {busTitle}{" "}
           </Text>
-          <Image className="ml-4" source={require("./img/Wifi.png")} />
-          <Image className="ml-4" source={require("./img/Clock.png")} />
-          <Text className="ml-4 font-bold text-sm">30km/h</Text>
-          <Image className="ml-4" source={require("./img/Phone.png")} />
+          <View className="flex-row space-x-3 mr-4">
+            <Image className="" source={require("./img/Wifi.png")} />
+            <Image className="" source={require("./img/Clock.png")} />
+            <Text className="font-bold text-sm">{speed}km/h</Text>
+            <Image className="" source={require("./img/Phone.png")} />
+          </View>
         </View>
-        <View className="flex-row flex-wrap">
-          <Text className="ml-4 text-sm">
-            Công viên phần mềm Quang trung - Bến xe Miền Đông mới
+        <View className="flex-row flex-wrap mt-3">
+          <Text className="mx-4 text-sm">
+            {desc}
+            <Text className="italic text-purple text-sm"> (lượt đi)</Text>
           </Text>
-          <Text className="ml-4 italic text-purple text-sm">(lượt đi)</Text>
         </View>
       </View>
     </View>

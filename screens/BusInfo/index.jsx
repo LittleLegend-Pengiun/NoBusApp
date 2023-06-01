@@ -1,17 +1,4 @@
-/*import React from 'react'
-import { Text, View } from 'react-native'
-import TopBar from './components/TopBar'
-
-export default function () {
-  return (
-    <View className="bg-white items-center">
-      <View className="h-10"></View>
-      <TopBar />
-    </View>
-  )
-}*/
-
-import React from "react";
+import React, { useState } from "react";
 import { TextInput, View, ScrollView } from "react-native";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import BusItem from "./components/BusItem";
@@ -24,17 +11,17 @@ const busItems = [
     desc2: "Công viên phần mềm Quang trung - Bến xe Miền Đông mới",
   },
   {
-    title: "50F-002.31",
+    title: "55F-002.31",
     desc1: "Tuyến 55: ",
     desc2: "Công viên phần mềm Quang trung - Bến xe Miền Đông mới",
   },
   {
-    title: "50F-002.35",
+    title: "57F-002.35",
     desc1: "Tuyến 55: ",
     desc2: "Công viên phần mềm Quang trung - Bến xe Miền Đông mới",
   },
   {
-    title: "50F-002.40",
+    title: "53F-002.40",
     desc1: "Tuyến 93: ",
     desc2: "Chợ Bến Thành - Bến xe Miền Đông mới",
   },
@@ -44,18 +31,34 @@ const busItems = [
     desc2: "Công viên phần mềm Quang trung - Bến xe Miền Đông mới",
   },
   {
-    title: "50F-002.76",
+    title: "55F-002.76",
     desc1: "Tuyến 55: ",
     desc2: "Chợ Bến Thành - Bến xe Miền Đông mới",
   },
   {
-    title: "50F-002.00",
+    title: "50D-002.00",
+    desc1: "Tuyến 55: ",
+    desc2: "Công viên phần mềm Quang trung - Bến xe Miền Đông mới",
+  },
+  {
+    title: "50E-002.61",
+    desc1: "Tuyến 55: ",
+    desc2: "Công viên phần mềm Quang trung - Bến xe Miền Đông mới",
+  },
+  {
+    title: "50G-002.75",
+    desc1: "Tuyến 55: ",
+    desc2: "Chợ Bến Thành - Bến xe Miền Đông mới",
+  },
+  {
+    title: "57K-002.01",
     desc1: "Tuyến 55: ",
     desc2: "Công viên phần mềm Quang trung - Bến xe Miền Đông mới",
   },
 ];
 
 export default function ({ navigation }) {
+  const [keyword, setKeyword] = useState("");
   return (
     <View className="bg-purple h-full">
       <PageTitle
@@ -71,16 +74,20 @@ export default function ({ navigation }) {
           placeholder="Nhập biển số xe cần tìm"
           keyboardType="default"
           className="pl-1 self-center"
+          defaultValue={keyword}
+          onChangeText={(newText) => setKeyword(newText)}
         />
       </View>
-      {/* History */}
-      <View className="bg-white rounded-lg px-3 mx-5 mb-5 mt-4 flex-1 relative">
-        <View className="top-12 flex-grow-0 h-5/6">
+
+      <View className="bg-white w-full mt-4 flex-1 relative">
+        <View className="flex-grow-0 my-2 mx-4">
           <ScrollView
             className="flex flex-col"
             showsVerticalScrollIndicator={false}
           >
-            {busItems.map(({ title, desc1, desc2 }) => (
+            {busItems
+            .filter((item) => item.title.toLowerCase().includes(keyword.toLowerCase()))
+            .map(({ title, desc1, desc2 }) => (
               <BusItem
                 key={title}
                 title={title}
