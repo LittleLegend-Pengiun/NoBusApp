@@ -54,4 +54,10 @@ The template's file structure is organized as follows:
   <br>
   <img src="Screenshots/scrshot3.png" width="50%">
   <br>
+  <br>
+  <img src="Screenshots/scrshot4.png" width="50%">
+  <br>
+  <br>
+  <img src="Screenshots/scrshot5.png" width="50%">
+  <br>
 </p>
