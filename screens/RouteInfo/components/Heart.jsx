@@ -1,14 +1,14 @@
 import React from "react";
 import { Image, TouchableOpacity, View, Text } from "react-native";
 
-function Heart() {
+function Heart({ star }) {
   return (
-    <View className="flex-row flex-wrap">
+    <View className="flex-col flex-wrap space-y-2 items-center">
       <Image source={require('../img/heart.png')} className="" />
 
-      <View className="flex-row flex-wrap">
+      <View className="flex-row flex-wrap items-center space-x-1">
         <Text className="text-black text-sm font-bold">
-          4.3
+          {star}
         </Text>
 
         <TouchableOpacity className="">

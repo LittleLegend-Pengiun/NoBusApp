@@ -2,7 +2,7 @@ import React from "react";
 import { Image, TouchableOpacity, View, Text } from "react-native";
 import Heart from "./Heart";
 
-function Route({ navigation }) {
+function Route({ navigation, title, route, price, time, star }) {
   return (
     <TouchableOpacity
       onPress={() => navigation.navigate("RouteDetail")}
@@ -12,8 +12,8 @@ function Route({ navigation }) {
       <View className="flex-row items-center space-x-2 py-2">
         <Image source={require("../img/buss2.png")} className="" />
         <View className="flex-col">
-          <Text className="text-black text-md font-bold text-lg">Metro 1</Text>
-          <Text className="text-black text-md">Bến Thành - Suối Tiên</Text>
+          <Text className="text-black text-md font-bold text-lg">{title}</Text>
+          <Text className="text-black text-md">{route}</Text>
           <View className="flex-row flex-wrap space-x-3">
             {/*time*/}
             <View
@@ -25,7 +25,7 @@ function Route({ navigation }) {
               />
 
               <Text className="text-black text-sm">
-                5:30 - 22:30
+                {time}
               </Text>
             </View>
 
@@ -38,13 +38,13 @@ function Route({ navigation }) {
                 className=""
               />
 
-              <Text className="text-black text-sm">7k VNĐ</Text>
+              <Text className="text-black text-sm">{price}k VNĐ</Text>
             </View>
           </View>
         </View>
       </View>
 
-      <Heart />
+      <Heart star={star}/>
     </TouchableOpacity>
   );
 }

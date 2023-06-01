@@ -1,20 +1,92 @@
 import React from "react";
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Image,
-  TextInput,
-  ScrollView,
-} from "react-native";
+import { View, Text, TextInput, ScrollView } from "react-native";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Route from "./components/Route";
-import PageTitle from "../components/PageTitle"
+import PageTitle from "../components/PageTitle";
+
+const routeInfoList = [
+  {
+    key: 1,
+    title: "Metro",
+    route: "Bến Thành - Suối tiên",
+    time: "5:30 - 22:30",
+    price: 7,
+    star: 4.3,
+  },
+  {
+    key: 2,
+    title: "Metro",
+    route: "Bến Thành - Suối tiên",
+    time: "5:30 - 22:30",
+    price: 7,
+    star: 4.9,
+  },
+  {
+    key: 3,
+    title: "Metro",
+    route: "Bến Thành - Suối tiên",
+    time: "5:30 - 22:30",
+    price: 7,
+    star: 4.9,
+  },
+  {
+    key: 4,
+    title: "Metro",
+    route: "Bến Thành - Suối tiên",
+    time: "5:30 - 22:30",
+    price: 7,
+    star: 4.9,
+  },
+  {
+    key: 5,
+    title: "Metro",
+    route: "Bến Thành - Suối tiên",
+    time: "5:30 - 22:30",
+    price: 7,
+    star: 4.9,
+  },
+  {
+    key: 6,
+    title: "Metro",
+    route: "Bến Thành - Suối tiên",
+    time: "5:30 - 22:30",
+    price: 7,
+    star: 4.9,
+  },
+  {
+    key: 7,
+    title: "Metro",
+    route: "Bến Thành - Suối tiên",
+    time: "5:30 - 22:30",
+    price: 7,
+    star: 4.9,
+  },
+  {
+    key: 8,
+    title: "Metro",
+    route: "Bến Thành - Suối tiên",
+    time: "5:30 - 22:30",
+    price: 7,
+    star: 4.9,
+  },
+  {
+    key: 9,
+    title: "Metro",
+    route: "Bến Thành - Suối tiên",
+    time: "5:30 - 22:30",
+    price: 7,
+    star: 4.9,
+  },
+]
 
 export default function ({ navigation }) {
   return (
     <View className="bg-purple h-full">
-      <PageTitle title={"Thông tin xe"} navigation={navigation} showReload={false} />
+      <PageTitle
+        title={"Thông tin xe"}
+        navigation={navigation}
+        showReload={false}
+      />
 
       {/* Search */}
       <View className="w-11/12 items-center flex-row space-x-2 bg-white py-2 px-3 mt-3 self-center rounded-xl drop-shadow">
@@ -28,25 +100,25 @@ export default function ({ navigation }) {
 
       {/*Purple Button Bar View*/}
       <View className="bg-purple w-full items-center justify-center flex flex-row divide-x-[3px] divide-white">
-        <View className="w-1/2 py-2 my-2 border border-purple border-b-white">          
+        <View className="w-1/2 py-2 my-2 border border-purple border-b-white">
           <Text className="text-white text-base font-bold text-center">
             Tất cả
           </Text>
         </View>
         <View className="w-1/2 py-2 my-2">
-          <Text className=" text-white text-center text-base font-bold">Yêu thích</Text>
+          <Text className=" text-white text-center text-base font-bold">
+            Yêu thích
+          </Text>
         </View>
       </View>
 
       {/*List route bus*/}
       <View className="bg-white flex-1">
-        {/*First*/}
-        <Route navigation={navigation} />
-        <Route navigation={navigation} />
-        <Route navigation={navigation} />
-        <Route navigation={navigation} />
-        <Route navigation={navigation} />
-        <Route navigation={navigation} />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          {routeInfoList.map((route) => (
+            <Route navigation={navigation} {...route} />
+          ))}
+        </ScrollView>
       </View>
     </View>
   );
