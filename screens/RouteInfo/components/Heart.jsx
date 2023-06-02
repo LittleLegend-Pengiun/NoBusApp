@@ -1,17 +1,18 @@
 import React from "react";
 import { Image, TouchableOpacity, View, Text } from "react-native";
 
-function Heart() {
+function Heart({ star }) {
   return (
-    <View style={{ flexDirection: 'column', flexWrap: 'wrap' }} className="mb-2">
-      <Image source={require('../img/heart.png')} className="mt-4 ml-4" />
+    <View className="flex-col flex-wrap space-y-2 items-center">
+      <Image source={require('../img/heart.png')} className="" />
 
-      <View style={{ flexDirection: 'row', flexWrap: 'wrap' }} className="mb-2">
-        <Text className="mt-10 ml-8  text-black text-lg font-bold">
-            4.3
+      <View className="flex-row flex-wrap items-center space-x-1">
+        <Text className="text-black text-sm font-bold">
+          {star}
         </Text>
-        <TouchableOpacity className="-mt-[70px] pb-2 ml-[310px] mb-2">
-            <Image source={require('../img/star.png')} className="mt-4 ml-4" />
+
+        <TouchableOpacity className="">
+          <Image source={require('../img/star.png')} className="" />
         </TouchableOpacity>
       </View>
 

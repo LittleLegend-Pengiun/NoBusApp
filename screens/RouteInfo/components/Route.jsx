@@ -1,31 +1,50 @@
-import React from "react"
-import { Image, TouchableOpacity, View, Text } from "react-native"
-import Heart from "./Heart"
-import Time from "./Time"
-import Money from "./Money"
+import React from "react";
+import { Image, TouchableOpacity, View, Text } from "react-native";
+import Heart from "./Heart";
 
-function Route({ navigation }) {
+function Route({ navigation, title, route, price, time, star }) {
   return (
-    <TouchableOpacity onPress={() => navigation.navigate("RouteDetail")} className="mb-2">
-        {/*Bus Button*/}
-        <TouchableOpacity onPress={() => null}>
-            <Image source={require('../img/buss2.png')} className="mt-4 ml-4" />
-        </TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => navigation.navigate("RouteDetail")}
+      className="flex-row items-center justify-between mx-2"
+    >
+      {/*Main label*/}
+      <View className="flex-row items-center space-x-2 py-2">
+        <Image source={require("../img/buss2.png")} className="" />
+        <View className="flex-col">
+          <Text className="text-black text-md font-bold text-lg">{title}</Text>
+          <Text className="text-black text-md">{route}</Text>
+          <View className="flex-row flex-wrap space-x-3">
+            {/*time*/}
+            <View
+              className="flex-row items-center space-x-1"
+            >
+              <Image
+                source={require("../img/clock.png")}
+                className=""
+              />
 
-        {/*Main label*/}
-        <View style={{ flexDirection: 'column', flexWrap: 'wrap' }}>
-            <Text className="mt-3 ml-4 text-black text-md w-[240px] font-bold text-lg">
-                Metro 1
-            </Text>
-            <Text className="ml-[59px] text-black text-md">Bến Thành - Suối Tiên</Text>
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-                <Time/>
-                <Money/>
+              <Text className="text-black text-sm">
+                {time}
+              </Text>
             </View>
-        </View>
 
-        {/*Time label*/}
-        <Heart/>
+            {/*money*/}
+            <View
+              className="flex-row items-center space-x-1"
+            >
+              <Image
+                source={require("../img/money.png")}
+                className=""
+              />
+
+              <Text className="text-black text-sm">{price}k VNĐ</Text>
+            </View>
+          </View>
+        </View>
+      </View>
+
+      <Heart star={star}/>
     </TouchableOpacity>
   );
 }
