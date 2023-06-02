@@ -22,7 +22,13 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.Nhom99.NoBusApp"
+      "package": "com.Nhom99.NoBusApp",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDoTvuuuKe5CQtsXkPWWBwavO6qpDOKtco"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
