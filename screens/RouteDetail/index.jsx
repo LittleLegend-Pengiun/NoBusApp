@@ -9,7 +9,8 @@ import {
 } from "react-native";
 import MapView from "react-native-maps";
 import AntDesign from "react-native-vector-icons/AntDesign";
-import Route from "./components/Route"
+import Route from "./components/Route";
+import { PROVIDER_GOOGLE } from "react-native-maps";
 
 const styles = StyleSheet.create({
   container: {
@@ -197,6 +198,7 @@ export default function ({ navigation }) {
             latitudeDelta: 0.04,
             longitudeDelta: 0.05,
           }}
+          provider={PROVIDER_GOOGLE}
         />
       </View>
 
