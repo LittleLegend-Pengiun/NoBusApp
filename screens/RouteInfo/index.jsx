@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, TextInput, ScrollView } from "react-native";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Route from "./components/Route";
@@ -80,6 +80,7 @@ const routeInfoList = [
 ]
 
 export default function ({ navigation }) {
+  const [keyword, setKeyword] = useState("");
   return (
     <View className="bg-purple h-full">
       <PageTitle
@@ -95,6 +96,8 @@ export default function ({ navigation }) {
           placeholder="Nhập tuyến xe cần tìm"
           keyboardType="default"
           className="pl-1 self-center"
+          defaultValue={keyword}
+          onChangeText={(newWord) => setKeyword(newWord)}
         />
       </View>
 
@@ -115,7 +118,9 @@ export default function ({ navigation }) {
       {/*List route bus*/}
       <View className="bg-white flex-1">
         <ScrollView showsVerticalScrollIndicator={false}>
-          {routeInfoList.map((route) => (
+          {routeInfoList
+          .filter((route) => route.title.toLowerCase().includes(keyword.toLowerCase()))
+          .map((route) => (
             <Route navigation={navigation} {...route} />
           ))}
         </ScrollView>
