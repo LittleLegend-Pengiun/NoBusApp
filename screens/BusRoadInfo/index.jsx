@@ -3,6 +3,7 @@ import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
 import MapView from "react-native-maps";
 import { PROVIDER_GOOGLE } from "react-native-maps";
 import AntDesign from "react-native-vector-icons/AntDesign";
+
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
@@ -17,8 +18,9 @@ const styles = StyleSheet.create({
 
 export default function ({ route, navigation }) {
   const { busTitle, desc } = route.params;
-  const max = 40, min = 5;
-  const speed = Math.floor(Math.random() * (max - min) ) + min;
+  const max = 40,
+    min = 5;
+  const speed = Math.floor(Math.random() * (max - min)) + min;
   return (
     <View className="h-full relative">
       {/* title */}

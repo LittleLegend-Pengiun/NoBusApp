@@ -1,12 +1,19 @@
-import React from 'react'
-import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native'
+import React, { useState } from "react";
+import {
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+} from "react-native";
 import MapView from "react-native-maps";
-import { SafeAreaView } from "react-native-safe-area-context";
+import AntDesign from "react-native-vector-icons/AntDesign";
+import Route from "./components/Route"
 
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
-    height: 290,
     marginTop: 95,
     bottom: 0,
   },
@@ -16,27 +23,166 @@ const styles = StyleSheet.create({
   },
 });
 
+const busRoute = [
+  {
+    title: "Công Trường Mê Linh",
+    time: 0,
+  },
+  {
+    title: "Bến Bạch Đằng",
+    time: 1,
+  },
+  {
+    title: "Cục Hải quan Thành phố",
+    time: 2,
+  },
+  {
+    title: "Chợ Cũ",
+    time: 3,
+  },
+  {
+    title: "Trường Cao Thắng",
+    time: 3,
+  },
+  {
+    title: "Trạm trung chuyển đường Hàm Nghi",
+    time: 4,
+  },
+  {
+    title: "Trường Ernst Thalman",
+    time: 5,
+  },
+  {
+    title: "KTX Trần Hưng Đạo",
+    time: 6,
+  },
+  {
+    title: "Rạp Hưng Đạo",
+    time: 7,
+  },
+  {
+    title: "Bệnh viện Răng Hàm Mặt",
+    time: 7,
+  },
+  {
+    title: "Trần Đình Xu",
+    time: 8,
+  },
+  {
+    title: "Tổng công ty Samco",
+    time: 9,
+  },
+  {
+    title: "Chợ Nacci",
+    time: 10,
+  },
+  {
+    title: "Nguyễn Biểu",
+    time: 11,
+  },
+  {
+    title: "Trường CĐ Kinh tế Đối ngoại",
+    time: 12,
+  },
+  {
+    title: "Trần Bình Trọng",
+    time: 12,
+  },
+  {
+    title: "Bệnh viện Chấn thương Chỉnh hình",
+    time: 13,
+  },
+  {
+    title: "Rạp Đồng Tháp",
+    time: 14,
+  },
+  {
+    title: "Rạp Đống Đa",
+    time: 14,
+  },
+  {
+    title: "Đồng Khánh",
+    time: 15,
+  },
+  {
+    title: "Nhà văn hóa Quận 5",
+    time: 16,
+  },
+  {
+    title: "Ngô Quyền",
+    time: 17,
+  },
+  {
+    title: "Tản Đà",
+    time: 18,
+  },
+  {
+    title: "Triệu Quang Phục",
+    time: 19,
+  },
+  {
+    title: "Bưu điên quận 5",
+    time: 20,
+  },
+  {
+    title: "Hải Thượng Lãn Ông",
+    time: 20,
+  },
+  {
+    title: "Chợ Kim Biên",
+    time: 21,
+  },
+  {
+    title: "Bến xe Chợ Lớn",
+    time: 22,
+  },
+];
+
+const reverseRoute = [
+  { title: 'Bến xe Chợ Lớn', time: 0 },
+  { title: 'Chợ Kim Biên', time: 1 },
+  { title: 'Hải Thượng Lãn Ông', time: 2 },
+  { title: 'Bưu điên quận 5', time: 2 },
+  { title: 'Triệu Quang Phục', time: 3 },
+  { title: 'Tản Đà', time: 4 },
+  { title: 'Ngô Quyền', time: 5 },
+  { title: 'Nhà văn hóa Quận 5', time: 6 },
+  { title: 'Đồng Khánh', time: 7 },
+  { title: 'Rạp Đống Đa', time: 8 },
+  { title: 'Rạp Đồng Tháp', time: 8 },
+  { title: 'Bệnh viện Chấn thương Chỉnh hình', time: 9 },
+  { title: 'Trần Bình Trọng', time: 10 },
+  { title: 'Trường CĐ Kinh tế Đối ngoại', time: 10 },
+  { title: 'Nguyễn Biểu', time: 11 },
+  { title: 'Chợ Nacci', time: 12 },
+  { title: 'Tổng công ty Samco', time: 13 },
+  { title: 'Trần Đình Xu', time: 14 },
+  { title: 'Bệnh viện Răng Hàm Mặt', time: 15 },
+  { title: 'Rạp Hưng Đạo', time: 15 },
+  { title: 'KTX Trần Hưng Đạo', time: 16 },
+  { title: 'Trường Ernst Thalman', time: 17 },
+  { title: 'Trạm trung chuyển đường Hàm Nghi', time: 18 },
+  { title: 'Trường Cao Thắng', time: 19 },
+  { title: 'Chợ Cũ', time: 19 },
+  { title: 'Cục Hải quan Thành phố', time: 20 },
+  { title: 'Bến Bạch Đằng', time: 21 },
+  { title: 'Công Trường Mê Linh', time: 22 }
+]
+
 export default function ({ navigation }) {
+  const [ret, setret] = useState(false);
+
   return (
-    <View className="h-full">
+    <View className="h-full relative">
       {/*Purple Top View*/}
-      <View className="bg-purple h-[95px] pt-1">
-
-        <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-          {/*Back Button*/}
-          <TouchableOpacity onPress={() => navigation.navigate("RouteInfo")}>
-            <Image source={require('./img/Arrow.png')} className="mt-10 ml-6" />
+      <View className="bg-purple pb-5">
+        <View className="flex-row items-center mt-10 mx-6">
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <AntDesign name="arrowleft" size={30} color="white" />
           </TouchableOpacity>
-
-          {/*Title*/}
-          <Image source={require('./img/Vector.png')} className="mt-10 ml-7" />
-          <Text className="ml-4 mt-10 text-white text-md font-bold text-base">Tuyến xe Metro</Text>
-
-          {/*Heart*/}
-          <Image source={require('./img/heart.png')} className="mt-10 ml-[105px] object-scale-down h-6 w-7" />
-
+          <Image className="ml-4 mr-3" source={require("./img/Vector.png")} />
+          <Text className="font-bold text-white text-lg">Tuyến xe 01</Text>
         </View>
-
       </View>
 
       {/*Map*/}
@@ -54,163 +200,72 @@ export default function ({ navigation }) {
         />
       </View>
 
-      {/*BẮT ĐẦU DẪN ĐƯỜNG Button*/}
-      <TouchableOpacity className="pt-2 pb-2 ml-3 mt-3 mb-2 w-[195px] rounded-3xl bg-purple" style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-        <Image source={require('./img/navigate.png')} className="ml-3 mt-1.5" />
-        <Text className="text-white font-bold mt-2">&nbsp;&nbsp;&nbsp;Bắt đầu dẫn đường</Text>
-      </TouchableOpacity>
+      <View className="absolute top-24 flex-row justify-between px-2 items-center w-full">
+        {/*BẮT ĐẦU DẪN ĐƯỜNG Button*/}
+        <TouchableOpacity
+          className="p-2 rounded-3xl bg-purple items-center space-x-2"
+          style={{ flexDirection: "row", flexWrap: "wrap" }}
+        >
+          <Image source={require("./img/navigate.png")} className="ml-1" />
+          <Text className="text-white font-bold text-center pr-3">
+            Bắt đầu dẫn đường
+          </Text>
+        </TouchableOpacity>
 
-
-      {/*CURRENT LOCATION Button*/}
-      <TouchableOpacity className="-mt-[70px] pb-2 ml-[310px] mb-2">
-        <Image source={require('./img/Clocation.png')} className="ml-3 mt-1.5" />
-      </TouchableOpacity>
-
-
-      {/*White Bar View*/}
-      <View className="bg-white h-[46px] top-[200px]">
-        <Text className="bg-gray rounded-md text-purple w-[70px] h-[30px] pl-[14px] pt-1 mt-2 ml-[78%] text-sm">
-          Lượt đi
-        </Text>
+        {/*CURRENT LOCATION Button*/}
+        <TouchableOpacity className="">
+          <Image source={require("./img/Clocation.png")} className="" />
+        </TouchableOpacity>
       </View>
 
-      {/*Purple Button Bar View*/}
-      <View className="bg-purple h-[50px] top-[200px] w-full items-center justify-center flex flex-row divide-x-[3px] divide-white">
-        <View className="pr-[15px]">
-          <Text className="text-white text-sm font-bold text-center border border-purple border-b-white">
-            Trạm dừng
-          </Text>
+      <View className="h-3/5 absolute inset-x-0 bottom-0 bg-white flex-col">
+        {/*White Bar View*/}
+        <View className="bg-white justify-between flex-row p-2">
+          <View />
+          <TouchableOpacity
+            className="bg-gray rounded-md text-purple w-1/6 p-1 items-center"
+            onPress={() => setret(!ret)}
+          >
+            <Text className={`text-center text-sm font-bold ${!ret? "text-dark-purple" : "text-dark-green"}`}>
+              {ret ? "Lượt về" : "Lượt đi"}
+            </Text>
+          </TouchableOpacity>
         </View>
-        <View className="pr-[17px] pl-[17px]">
-          <Text className="text-white text-sm font-bold">
-            Thời gian
-          </Text>
+
+        {/*Purple Button Bar View*/}
+        <View className="bg-purple w-full items-center justify-center flex flex-row divide-x-[3px] divide-white py-1">
+          <View className="w-1/4 border border-purple border-b-white py-1">
+            <Text className="text-white text-sm font-bold text-center ">
+              Trạm dừng
+            </Text>
+          </View>
+          {["Thời gian", "Thông tin", "Đánh giá"].map((item) => (
+            <View className="w-1/4">
+              <Text
+                key={item}
+                className="text-white text-center text-sm font-bold"
+              >
+                {item}
+              </Text>
+            </View>
+          ))}
         </View>
-        <View className="pr-[17px] pl-[17px]">
-          <Text className="text-white text-sm font-bold">
-            Thông tin
-          </Text>
-        </View>
-        <View className="pl-[17px]">
-          <Text className="text-white text-sm font-bold">
-            Đánh giá
-          </Text>
+
+        {/*White Detail View*/}
+        <View className="flex-col flex-wrap flex-1">
+          <ScrollView showsVerticalScrollIndicator={false}>
+            {(ret? reverseRoute : busRoute).map((item, index) => (
+              <Route
+                key={index}
+                isFirst={index == 0}
+                isLast={index == busRoute.length - 1}
+                reverse={ret}
+                {...item}
+              />
+            ))}
+          </ScrollView>
         </View>
       </View>
-
-
-      {/*White Detail View*/}
-      <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-
-        <Image source={require('./img/cotmoc.png')} className="mt-[222px] ml-1" />
-
-        {/*Second*/}
-        <View className="mt-[225px] -ml-[190px]">
-          <View className="pb-[2px] flex-row mb-2 justify-between">
-            <Text className="mr-[100px] text-xs">Bến xe Chợ Lớn</Text>
-            <Text className="text-xs"></Text>
-          </View>
-          <View
-            style={{
-              borderBottomColor: '#D9D9D9',
-              borderBottomWidth: 2,
-            }}
-            className="w-[310px]"
-          />
-        </View>
-
-        {/*Second*/}
-        <View className="mt-[263px] -ml-[310px]">
-          <View className="pb-[2px] flex-row mb-2 justify-between">
-            <Text className="mr-[100px] text-xs">Tháp Mười</Text>
-            <Text className="text-xs">+2 phút</Text>
-          </View>
-          <View
-            style={{
-              borderBottomColor: '#D9D9D9',
-              borderBottomWidth: 2,
-            }}
-            className="w-[310px]"
-          />
-        </View>
-
-        {/*Third*/}
-        <View className="mt-[301px] -ml-[310px]">
-          <View className="pb-[2px] flex-row mb-2 justify-between">
-            <Text className="mr-[100px] text-xs">Chợ Kim Biên</Text>
-            <Text className="text-xs">+3 phút</Text>
-          </View>
-          <View
-            style={{
-              borderBottomColor: '#D9D9D9',
-              borderBottomWidth: 2,
-            }}
-            className="w-[310px]"
-          />
-        </View>
-
-        {/*Fourth*/}
-        <View className="mt-[338px] -ml-[310px]">
-          <View className="pb-[2px] flex-row mb-2 justify-between">
-            <Text className="mr-[100px] text-xs">Bưu điện Quận 5</Text>
-            <Text className="text-xs">+4 phút</Text>
-          </View>
-          <View
-            style={{
-              borderBottomColor: '#D9D9D9',
-              borderBottomWidth: 2,
-            }}
-            className="w-[310px]"
-          />
-        </View>
-
-        {/*Fifth*/}
-        <View className="mt-[376px] -ml-[310px]">
-          <View className="pb-[2px] flex-row mb-2 justify-between">
-            <Text className="mr-[100px] text-xs">Rạp Đại Quang</Text>
-            <Text className="text-xs">+5 phút</Text>
-          </View>
-          <View
-            style={{
-              borderBottomColor: '#D9D9D9',
-              borderBottomWidth: 2,
-            }}
-            className="w-[310px]"
-          />
-        </View>
-
-        {/*Sixth*/}
-        <View className="mt-[413px] -ml-[310px]">
-          <View className="pb-[2px] flex-row mb-2 justify-between">
-            <Text className="mr-[100px] text-xs">Bệnh viện Chợ Rẫy</Text>
-            <Text className="text-xs">+6 phút</Text>
-          </View>
-          <View
-            style={{
-              borderBottomColor: '#D9D9D9',
-              borderBottomWidth: 2,
-            }}
-            className="w-[310px]"
-          />
-        </View>
-
-        {/*Seventh*/}
-        <View className="mt-[450px] -ml-[310px]">
-          <View className="pb-[2px] flex-row mb-2 justify-between">
-            <Text className="mr-[100px] text-xs">Lý Thường Kiệt</Text>
-            <Text className="text-xs">+8 phút</Text>
-          </View>
-          <View
-            style={{
-              borderBottomColor: '#D9D9D9',
-              borderBottomWidth: 2,
-            }}
-            className="w-[310px]"
-          />
-        </View>
-
-      </View>
-    </View >
-
-  )
+    </View>
+  );
 }
