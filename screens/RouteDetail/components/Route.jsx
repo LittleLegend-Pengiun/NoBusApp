@@ -23,4 +23,4 @@ function Route({ title, time, isFirst, isLast, reverse }) {
   );
 }
 
-export default Route;
+export default Route
