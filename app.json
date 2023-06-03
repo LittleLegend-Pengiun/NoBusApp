@@ -1,33 +1,38 @@
 {
-  "expo": {
-    "name": "NoBusApp",
-    "slug": "NoBusApp",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#6d41a1"
+  "name": "NoBusApp",
+  "slug": "NoBusApp",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "icon": "./assets/icon.png",
+  "userInterfaceStyle": "light",
+  "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#6d41a1"
+  },
+  "assetBundlePatterns": [
+    "**/*"
+  ],
+  "ios": {
+    "supportsTablet": true
+  },
+  "android": {
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/adaptive-icon.png",
+      "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.Nhom99.NoBusApp"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-    }
-  }
+    "package": "com.Nhom99.NoBusApp"
+
+  },
+  "web": {
+    "favicon": "./assets/favicon.png"
+  },
+  "extra": {
+  },
+  "sdkVersion": "48.0.0",
+  "platforms": [
+    "ios",
+    "android",
+    "web"
+  ]
 }
