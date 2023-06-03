@@ -10,11 +10,14 @@ export default function() {
 
       <View className="flex flex-col">
         {/* First half of top bar*/}
-        <View className="bg-purple pt-10 pb-4 w-full flex flex-row">
-          <View className="flex-1" />
+        <View className="bg-purple pt-10 pb-4 w-full h-32 relative">
+        <Image 
+          source={require("./img/Logo.png")}
+          className="h-14 absolute left-2 top-12"
+          />
           <Image 
-          source={require("../../../../assets/title.png")}
-          className="h-20 pt-1"
+          source={require("./img/bus.png")}
+          className="h-20 absolute right-0 top-10"
           />
         </View>
 

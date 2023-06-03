@@ -9,7 +9,7 @@ const routeInfoList = [
     key: 1,
     title: "Tuyến xe 01",
     route: "Bến Thành - Bến xe buýt Chợ Lớn",
-    time: "5:30 - 22:30",
+    time: "5:00 - 20:15",
     price: 7,
     star: 4.3,
   },
@@ -17,7 +17,7 @@ const routeInfoList = [
     key: 2,
     title: "Tuyến xe 01",
     route: "Bến Thành - Bến xe buýt Chợ Lớn",
-    time: "5:30 - 22:30",
+    time: "5:00 - 20:15",
     price: 7,
     star: 4.9,
   },
@@ -25,7 +25,7 @@ const routeInfoList = [
     key: 3,
     title: "Tuyến xe 01",
     route: "Bến Thành - Bến xe buýt Chợ Lớn",
-    time: "5:30 - 22:30",
+    time: "5:00 - 20:15",
     price: 7,
     star: 4.9,
   },
@@ -33,7 +33,7 @@ const routeInfoList = [
     key: 4,
     title: "Tuyến xe 01",
     route: "Bến Thành - Bến xe buýt Chợ Lớn",
-    time: "5:30 - 22:30",
+    time: "5:00 - 20:15",
     price: 7,
     star: 4.9,
   },
@@ -84,7 +84,7 @@ export default function ({ navigation }) {
   return (
     <View className="bg-purple h-full">
       <PageTitle
-        title={"Thông tin xe"}
+        title={"Chọn tuyến xe"}
         navigation={navigation}
         showReload={false}
       />
